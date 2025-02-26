@@ -1,6 +1,9 @@
-const ExchangeButton = () => {
+const ExchangeButton = ({ onClick }) => {
     return (
-      <button className="w-full max-w-md bg-green-500 text-black text-lg font-bold p-4 rounded-lg mt-4">
+      <button
+        className="w-full bg-green-500 text-black p-4 rounded-lg mt-4"
+        onClick={onClick}
+      >
         Exchange Money
       </button>
     );
