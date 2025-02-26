@@ -27,9 +27,18 @@
 }
 
 .nav-item.active {
-    @apply text-green-400;
+    @apply text-lime-400;
 }
 
 .add-button {
     @apply bg-gray-800 p-2 rounded-full shadow-lg;
 }
+/* Ẩn thanh cuộn ngang */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  

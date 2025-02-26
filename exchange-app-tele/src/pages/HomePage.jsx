@@ -6,17 +6,18 @@ import BottomNav from "../components/BottomNav";
 import Transactions from "../components/HomePage/Transactions";
 
 const HomePage = () => {
-  return (
-    <div className="bg-black min-h-screen text-white">
-      <Header />
-      <BalanceCard />
-      <BudgetInfo />
-      <RecentTransactions />
-      <Transactions />
-      <BottomNav />
-
-    </div>
-  );
+    return (
+        <div className="bg-[#262626] min-h-screen text-white ">
+            <Header />
+            <div className="pt-24 px-4">
+                <BalanceCard />
+            </div>
+            <BudgetInfo />
+            <RecentTransactions />
+            <Transactions />
+            <BottomNav />
+        </div>
+    );
 };
 
 export default HomePage;

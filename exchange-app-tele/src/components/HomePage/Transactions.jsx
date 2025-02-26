@@ -18,19 +18,20 @@ const Transactions = () => {
       : transactionsData.filter((t) => t.type === selectedFilter);
 
   return (
-    <div className="p-4 bg-black text-white rounded-2xl mt-4">
-      <div className="flex justify-between items-center">
+    <div className="p-4 bg-[#262626] text-white rounded-2xl mt-4">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-3">
         <h2 className="text-lg font-semibold">Transactions</h2>
         <button className="text-gray-400 text-sm">See All</button>
       </div>
 
       {/* Bộ lọc giao dịch */}
-      <div className="flex gap-2 mt-3">
+      <div className="flex gap-2 mt-3 overflow-x-auto scrollbar-hide">
         {filterOptions.map((filter) => (
           <button
             key={filter}
-            className={`px-3 py-1 rounded-lg text-sm ${
-              selectedFilter === filter ? "bg-green-500 text-black" : "bg-gray-800 text-gray-300"
+            className={`px-4 py-1.5 rounded-full text-sm transition-all duration-300 border border-gray-700 ${
+              selectedFilter === filter ? "bg-lime-400 text-black" : "bg-[#262626] text-gray-300"
             }`}
             onClick={() => setSelectedFilter(filter)}
           >
@@ -40,17 +41,25 @@ const Transactions = () => {
       </div>
 
       {/* Danh sách giao dịch */}
-      <div className="mt-4 space-y-3">
+      <div className="mt-4 space-y-1 max-h-60 overflow-y-auto scrollbar-hide">
         {filteredTransactions.map((tx) => (
-          <div key={tx.id} className="flex justify-between items-center p-3 bg-gray-900 rounded-lg">
-            <div className="flex items-center gap-3">
-              <img src={tx.avatar} alt={tx.name} className="w-10 h-10 rounded-full" />
+          <div
+            key={tx.id}
+            className="flex justify-between items-center p-3 bg-[#262626] rounded-lg hover:bg-[#1d1d1d] transition duration-300"
+          >
+            <div className="flex items-center gap-4">
+              <img src={tx.avatar} alt={tx.name} className="w-12 h-12 rounded-full" />
               <div>
                 <p className="text-sm font-medium">{tx.name}</p>
                 <p className="text-xs text-gray-400">{tx.time}</p>
               </div>
             </div>
-            <p className={`text-sm ${tx.amount.includes("+") ? "text-green-400" : "text-red-400"}`}>{tx.amount}</p>
+            <div className="text-right">
+              <p className={`text-sm font-semibold ${tx.amount.includes("+") ? "text-lime-400" : "text-red-400"}`}>
+                {tx.amount}
+              </p>
+              <p className="text-xs text-gray-500">{tx.type}</p>
+            </div>
           </div>
         ))}
       </div>
