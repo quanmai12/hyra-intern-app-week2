@@ -15,8 +15,9 @@ function App() {
           {/* <Route path="/transactions" element={<Transactions />} /> */}
           <Route path="/exchange" element={<ExchangePage />} />
         </Routes>
+        <BottomNav />
       </div>
-      <BottomNav />
+
     </Router>
   );
 }
