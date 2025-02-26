@@ -7,7 +7,7 @@ import Transactions from "../components/HomePage/Transactions";
 
 const HomePage = () => {
     return (
-        <div className="bg-[#262626] min-h-screen text-white ">
+        <div className="bg-[#262626] min-h-screen text-white pb-20">
             <Header />
             <div className="pt-24 px-4">
                 <BalanceCard />

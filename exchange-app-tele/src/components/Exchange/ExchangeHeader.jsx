@@ -1,11 +1,42 @@
 import { IoArrowBack } from "react-icons/io5";
+import { BsThreeDots } from "react-icons/bs";
+import { useState } from "react";
 
 const ExchangeHeader = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <div className="flex justify-between items-center p-4">
-      <IoArrowBack className="text-white text-2xl cursor-pointer" />
-      <h1 className="text-white text-lg font-semibold">Exchange</h1>
-      <div className="w-6"></div> {/* Chừa khoảng trống để căn giữa tiêu đề */}
+    <div className="flex items-center justify-between px-4 py-3 bg-[#262626] relative">
+      {/* Nút Back */}
+      <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#313131] hover:bg-[#3b3b3b] transition">
+        <IoArrowBack className="text-white text-2xl" />
+      </button>
+
+      {/* Tiêu đề căn giữa tuyệt đối */}
+      <h1 className="text-white text-lg font-semibold absolute left-1/2 transform -translate-x-1/2">
+        Exchange
+      </h1>
+
+      <div className="relative">
+        <button
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-[#313131] hover:bg-[#3b3b3b] transition"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <BsThreeDots className="text-white text-2xl" />
+        </button>
+
+        {/* Menu hiển thị khi bấm vào */}
+        {showMenu && (
+          <div className="absolute right-0 mt-2 w-40 bg-[#313131] text-white shadow-lg rounded-xl p-2">
+            <button className="block w-full text-left px-4 py-2 hover:bg-[#3b3b3b] rounded-lg">
+              Transaction History
+            </button>
+            <button className="block w-full text-left px-4 py-2 hover:bg-[#3b3b3b] rounded-lg">
+              Settings
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

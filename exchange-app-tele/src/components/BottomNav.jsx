@@ -12,8 +12,8 @@ const BottomNav = () => {
   const isActive = (path) => location.pathname === path ? "text-green-400" : "text-white";
 
   return (
-    <div className="fixed bottom-2 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-6 shadow-lg">
-      {/* Các icon điều hướng có đổi màu khi active */}
+<div className=" fixed bottom-2 left-1/2 transform -translate-x-1/2 bg-[#262626] backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-6 shadow-lg z-50" >
+{/* Các icon điều hướng có đổi màu khi active */}
       <Home className={`w-6 h-6 cursor-pointer ${isActive("/")}`} onClick={() => navigate("/")} />
       <Repeat className={`w-6 h-6 cursor-pointer ${isActive("/exchange")}`} onClick={() => navigate("/exchange")} />
       

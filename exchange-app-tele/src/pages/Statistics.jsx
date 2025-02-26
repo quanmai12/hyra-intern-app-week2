@@ -6,7 +6,7 @@ const Statistics = () => {
   const [activeTab, setActiveTab] = useState("Income");
 
   return (
-    <div className="p-4 bg-black text-white min-h-screen">
+    <div className="pb-20 p-4 bg-black text-white min-h-screen">
       <h1 className="text-lg font-semibold text-center">Statistics</h1>
       <IncomeSpendingToggle activeTab={activeTab} setActiveTab={setActiveTab} />
       <IncomeChart activeTab={activeTab} />

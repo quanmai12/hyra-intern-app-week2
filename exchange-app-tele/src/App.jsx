@@ -8,7 +8,7 @@ import ExchangePage from "./pages/ExchangePage";
 function App() {
   return (
     <Router>
-      <div className="pb-16">
+      <div className="pb-16" style={{paddingBottom: 0}}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/statistics" element={<Statistics />} />

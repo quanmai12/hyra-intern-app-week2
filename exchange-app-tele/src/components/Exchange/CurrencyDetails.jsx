@@ -25,4 +25,3 @@ const CurrencyDetails = () => {
   };
   
   export default CurrencyDetails;
-  

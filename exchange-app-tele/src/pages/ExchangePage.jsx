@@ -19,7 +19,7 @@ const ExchangePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-4">
+    <div className="min-h-screen bg-[#262626] text-white p-4 pb-20">
       <ExchangeHeader />
       <CurrencyInput label="From" amount={fromAmount} currency={currency} onAmountChange={setFromAmount} onCurrencyChange={setCurrency} />
       <CurrencyInput label="To" amount={toAmount} currency="VND" onAmountChange={setToAmount} />
