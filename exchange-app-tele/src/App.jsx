@@ -4,6 +4,7 @@ import Statistics from "./pages/Statistics";
 // import Transactions from "./pages/Transactions";
 import BottomNav from "./components/BottomNav";
 import ExchangePage from "./pages/ExchangePage";
+import WebApp from "@twa-dev/sdk";
 
 function App() {
   return (
