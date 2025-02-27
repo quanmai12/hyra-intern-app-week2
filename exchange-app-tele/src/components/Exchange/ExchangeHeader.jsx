@@ -1,15 +1,19 @@
 import { IoArrowBack } from "react-icons/io5";
 import { BsThreeDots } from "react-icons/bs";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 const ExchangeHeader = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const navigate = useNavigate(); // Điều hướng trang
+
 
   return (
     <div className="flex items-center justify-between px-4 py-3 bg-[#262626] relative">
       {/* Nút Back */}
       <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#313131] hover:bg-[#3b3b3b] transition">
-        <IoArrowBack className="text-white text-2xl" />
+        <IoArrowBack className="text-white text-2xl" onClick={() => navigate("/")}/>
       </button>
 
       {/* Tiêu đề căn giữa tuyệt đối */}

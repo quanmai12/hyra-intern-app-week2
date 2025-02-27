@@ -16,7 +16,7 @@ const paymentsData = [
 
 const ScheduledPayments = () => {
   return (
-    <div className="p-4 bg-black text-white rounded-2xl mt-4">
+    <div className="p-4 bg-[#272727] text-white rounded-2xl mt-4">
       <div className="flex justify-between items-center">
         <h2 className="text-lg font-semibold">Scheduled Payments</h2>
         <button className="text-gray-400 text-sm">See all</button>
@@ -25,7 +25,7 @@ const ScheduledPayments = () => {
       {/* Danh sách thanh toán */}
       <div className="mt-3 flex gap-3">
         {paymentsData.map((payment) => (
-          <div key={payment.id} className="flex flex-col items-center p-4 bg-gray-900 rounded-xl w-1/3">
+          <div key={payment.id} className="flex flex-col items-center p-4 bg-[#292929] rounded-xl w-1/3">
             {/* Icon trắng */}
             <div className="w-10 h-10 flex items-center justify-center">{payment.icon}</div>
             <p className="text-sm font-medium mt-2">{payment.name}</p>

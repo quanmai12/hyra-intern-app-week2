@@ -20,7 +20,7 @@ const BottomNav = () => {
       {/* Nút Add */}
       <div className="relative">
         <button
-          className="w-14 h-14 bg-green-500 text-black rounded-full flex items-center justify-center shadow-lg"
+          className="w-14 h-14 bg-lime-400 text-black rounded-full flex items-center justify-center shadow-lg"
           onClick={() => setShowMenu(!showMenu)}
         >
           <PlusCircle className="w-8 h-8" />

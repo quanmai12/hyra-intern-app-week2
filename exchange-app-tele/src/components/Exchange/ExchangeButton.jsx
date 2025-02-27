@@ -1,13 +1,14 @@
+import React from "react";
+
 const ExchangeButton = ({ onClick }) => {
-    return (
-      <button
-        className="w-full bg-green-500 text-black p-4 rounded-lg mt-4"
-        onClick={onClick}
-      >
-        Exchange Money
-      </button>
-    );
-  };
-  
-  export default ExchangeButton;
-  
+  return (
+    <button 
+      className="bg-lime-500 text-black text-lg font-bold py-4 w-full rounded-lg mt-4"
+      onClick={onClick}
+    >
+      Exchange Money
+    </button>
+  );
+};
+
+export default ExchangeButton;

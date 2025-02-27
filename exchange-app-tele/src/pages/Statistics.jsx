@@ -1,16 +1,14 @@
-import { useState } from "react";
-import IncomeSpendingToggle from "../components/Statisics/IncomeSpendingToggle";
+import React from "react";
+import StatisiticsHeader from "../components/Statisics/StatisiticsHeader";
 import IncomeChart from "../components/Statisics/IncomeChart";
 import ScheduledPayments from "../components/Statisics/ScheduledPayments";
 const Statistics = () => {
-  const [activeTab, setActiveTab] = useState("Income");
-
   return (
-    <div className="pb-20 p-4 bg-black text-white min-h-screen">
-      <h1 className="text-lg font-semibold text-center">Statistics</h1>
-      <IncomeSpendingToggle activeTab={activeTab} setActiveTab={setActiveTab} />
-      <IncomeChart activeTab={activeTab} />
+    <div className="bg-[#262626] min-h-screen text-white p-4 pb-20 ">
+      <StatisiticsHeader />
+      <IncomeChart />
       <ScheduledPayments />
+
     </div>
   );
 };
